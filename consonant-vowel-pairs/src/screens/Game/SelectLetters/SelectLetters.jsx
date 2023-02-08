@@ -39,10 +39,16 @@ function SelectLetters() {
         className="SelectLetters"
         style={{ display: "flex", justifyContent: "space-around" }}
       >
-        <div>
+        <div className="column">
           <h3>Consonants</h3>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                marginRight: "10px",
+              }}
+            >
               {consonants.slice(0, consonants.length / 2).map((consonant) => (
                 <button
                   style={
