@@ -55,7 +55,8 @@ function SelectLetters() {
               }}
             >
               {consonants.slice(0, consonants.length / 2).map((consonant) => (
-                <button
+                <div
+                  className="button"
                   style={
                     selectedConsonants.find((con) => con === consonant)
                       ? selectedLetterStyle
@@ -65,14 +66,15 @@ function SelectLetters() {
                   onClick={toggleConsonant(consonant)}
                 >
                   <span className="buttonLetter">{consonant}</span>
-                </button>
+                </div>
               ))}
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               {consonants
                 .slice(consonants.length / 2, consonants.length)
                 .map((consonant) => (
-                  <button
+                  <div
+                    className="button"
                     style={
                       selectedConsonants.find((con) => con === consonant)
                         ? selectedLetterStyle
@@ -82,7 +84,7 @@ function SelectLetters() {
                     onClick={toggleConsonant(consonant)}
                   >
                     <span className="buttonLetter">{consonant}</span>
-                  </button>
+                  </div>
                 ))}
             </div>
           </div>
@@ -90,7 +92,8 @@ function SelectLetters() {
         <div className="column">
           <h3>Vowels</h3>
           {vowels.map((vowel) => (
-            <button
+            <div
+              className="button"
               key={vowel}
               style={
                 selectedVowels.find((vow) => vow === vowel)
@@ -100,7 +103,7 @@ function SelectLetters() {
               onClick={toggleVowel(vowel)}
             >
               <span className="buttonLetter">{vowel}</span>
-            </button>
+            </div>
           ))}
         </div>
       </div>
