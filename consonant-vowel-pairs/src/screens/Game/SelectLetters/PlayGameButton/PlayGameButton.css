@@ -15,3 +15,8 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+.PlayGameButton button.disabled {
+    background-color: rgb(34, 175, 99, 0.5);
+    cursor: not-allowed;
+}
