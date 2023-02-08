@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { GameParamtersContext } from "../../App";
 import letterColors from "./letterColors";
 import NextPair from "./NextPair/NextPair";
+import { sample } from "lodash";
 import "./Play.css";
 
 function Play() {
@@ -20,13 +21,10 @@ function Play() {
   }, []);
 
   const createNewPair = () => {
-    const randomConsonant =
-      consonants[Math.floor(Math.random() * consonants.length)];
-    const randomConsonantColor =
-      letterColors[Math.floor(Math.random() * letterColors.length)];
-    const randomVowel = vowels[Math.floor(Math.random() * vowels.length)];
-    const randomVowelColor =
-      letterColors[Math.floor(Math.random() * letterColors.length)];
+    const randomConsonant = sample(consonants);
+    const randomConsonantColor = sample(letterColors);
+    const randomVowel = sample(vowels);
+    const randomVowelColor = sample(letterColors);
 
     setSelectedConsonant({
       letter: randomConsonant,
