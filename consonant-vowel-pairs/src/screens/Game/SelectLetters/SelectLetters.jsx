@@ -8,7 +8,6 @@ import "./SelectLetters.css";
 const selectedLetterStyle = {
   backgroundColor: "blue",
   color: "white",
-  borderRadius: "25px",
 };
 
 function SelectLetters() {
