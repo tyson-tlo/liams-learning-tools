@@ -59,7 +59,7 @@ function SelectLetters() {
                   key={consonant}
                   onClick={toggleConsonant(consonant)}
                 >
-                  {consonant}
+                  <span className="buttonLetter">{consonant}</span>
                 </button>
               ))}
             </div>
@@ -76,7 +76,7 @@ function SelectLetters() {
                     key={consonant}
                     onClick={toggleConsonant(consonant)}
                   >
-                    {consonant}
+                    <span className="buttonLetter">{consonant}</span>
                   </button>
                 ))}
             </div>
@@ -94,7 +94,7 @@ function SelectLetters() {
               }
               onClick={toggleVowel(vowel)}
             >
-              {vowel}
+              <span className="buttonLetter">{vowel}</span>
             </button>
           ))}
         </div>

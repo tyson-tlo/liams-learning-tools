@@ -20,6 +20,9 @@
     font-weight: bold;
     color: #000;
     cursor: pointer;
-    margin: 0 auto;
     margin-bottom: 4px;
+}
+
+.SelectLetters .buttonLetter {
+    margin: 0 auto;
 }
