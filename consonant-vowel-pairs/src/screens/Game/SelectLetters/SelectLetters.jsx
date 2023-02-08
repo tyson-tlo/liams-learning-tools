@@ -5,6 +5,12 @@ import vowels from "./defaults/vowels";
 import PlayGameButton from "./PlayGameButton/PlayGameButton";
 import "./SelectLetters.css";
 
+const selectedLetterStyle = {
+  backgroundColor: "blue",
+  color: "white",
+  borderRadius: "25px",
+};
+
 function SelectLetters() {
   const {
     vowels: selectedVowels,
@@ -53,7 +59,7 @@ function SelectLetters() {
                 <button
                   style={
                     selectedConsonants.find((con) => con === consonant)
-                      ? { backgroundColor: "blue", color: "white" }
+                      ? selectedLetterStyle
                       : {}
                   }
                   key={consonant}
@@ -70,7 +76,7 @@ function SelectLetters() {
                   <button
                     style={
                       selectedConsonants.find((con) => con === consonant)
-                        ? { backgroundColor: "blue", color: "white" }
+                        ? selectedLetterStyle
                         : {}
                     }
                     key={consonant}
@@ -89,7 +95,7 @@ function SelectLetters() {
               key={vowel}
               style={
                 selectedVowels.find((vow) => vow === vowel)
-                  ? { backgroundColor: "blue", color: "white" }
+                  ? selectedLetterStyle
                   : {}
               }
               onClick={toggleVowel(vowel)}
